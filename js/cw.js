@@ -53,7 +53,11 @@
 // // символів і додає в кінець рядка три крапки '...', після чого повертає укорочену
 // // версію
 
-// // ```js
+// const formatString = function (string) {
+// }
+
+// // Відповідь
+
 // const formatString = function (string) {
 //   // твій код
 //     if (string.length > 40) {
@@ -93,40 +97,43 @@ Input: [0, -1, -5]
 Output: "even"
 */
 
-function oddOrEven(array) {
-    // return (array.reduce((pV, b) => {return pV + b}, 0) / array.length) % 2 === 0 ? 'even' : 'odd';
-    const number = array.reduce((pV, b) => { return pV + b }, 0);
-    console.log(number);
-}
+// function oddOrEven(array) {
+// }
 
 
-console.log(oddOrEven([0]));
-// , 'even')
-console.log(oddOrEven([1]));
-// , 'odd')
-console.log(oddOrEven([]));
-// , 'even')
-console.log(oddOrEven([0, 1, 5]));
-// , 'even')
-console.log(oddOrEven([0, 1, 3]));
-// , 'even')
-console.log(oddOrEven([1023, 1, 2]));
-// , 'even')
-console.log(oddOrEven([0, -1, -5]));
-// , 'even')
-console.log(oddOrEven([0, -1, -3]));
-//  'even')
-console.log(oddOrEven([-1023, 1, -2]));
-// , 'even')
-console.log(oddOrEven([0, 1, 2]));
-// , 'odd')
-console.log(oddOrEven([0, 1, 4]));
-// , 'odd')
-console.log(oddOrEven([1023, 1, 3]));
-// , 'odd')
-console.log(oddOrEven([0, -1, 2]));
-// , 'odd')
-console.log(oddOrEven([0, 1, -4]));
-// , 'odd')
-console.log(oddOrEven([-1023, -1, 3]));
-// , 'odd')
+// console.log(oddOrEven([0]));
+// // , 'even')
+// console.log(oddOrEven([1]));
+// // , 'odd')
+// console.log(oddOrEven([]));
+// // , 'even')
+// console.log(oddOrEven([0, 1, 5]));
+// // , 'even')
+// console.log(oddOrEven([0, 1, 3]));
+// // , 'even')
+// console.log(oddOrEven([1023, 1, 2]));
+// // , 'even')
+// console.log(oddOrEven([0, -1, -5]));
+// // , 'even')
+// console.log(oddOrEven([0, -1, -3]));
+// //  'even')
+// console.log(oddOrEven([-1023, 1, -2]));
+// // , 'even')
+// console.log(oddOrEven([0, 1, 2]));
+// // , 'odd')
+// console.log(oddOrEven([0, 1, 4]));
+// // , 'odd')
+// console.log(oddOrEven([1023, 1, 3]));
+// // , 'odd')
+// console.log(oddOrEven([0, -1, 2]));
+// // , 'odd')
+// console.log(oddOrEven([0, 1, -4]));
+// // , 'odd')
+// console.log(oddOrEven([-1023, -1, 3]));
+// // , 'odd')
+
+// // // Відповідь
+
+// function oddOrEven(array) {
+//     return (array.reduce((pV, b) => {return pV + b}, 0)) % 2 === 0 ? 'even' : 'odd';
+// }
