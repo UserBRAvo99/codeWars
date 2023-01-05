@@ -137,3 +137,33 @@ Output: "even"
 // function oddOrEven(array) {
 //     return (array.reduce((pV, b) => {return pV + b}, 0)) % 2 === 0 ? 'even' : 'odd';
 // }
+
+// **************************
+
+/* Реалізуйте функцію unique_in_order, яка приймає як аргумент послідовність і повертає список елементів без будь-яких елементів із однаковим значенням один поруч із збереженням початкового порядку елементів.
+
+Наприклад:
+
+uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
+
+// var uniqueInOrder=function(iterable){
+//   //your code here - remember iterable can be a string or an array
+// }
+
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+// // // Відповідь
+
+// var uniqueInOrder=function(iterable){
+//     const newAr = []
+//     const newIterable = iterable.split('')
+//     for (let i = -1; i < newIterable.length; i += 1) {;
+//         if (iterable[i] !== newIterable[i + 1]) {
+//             newAr.push(newIterable[i])
+//         }
+//     }
+//     return newAr
+// }
