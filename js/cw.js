@@ -14,7 +14,6 @@
 // }
 // // const rentalCarCost = d => (d >= 3 && d < 7) ? (d * 40) - 20 : (d >= 7) ? (d * 40) - 50 : d * 40;
 
-
 // console.log(rentalCarCost(1));
 // // Відповідь - 40
 // console.log(rentalCarCost(2));
@@ -35,8 +34,6 @@
 // // Відповідь - 310
 // console.log(rentalCarCost(10));
 // // Відповідь - 350
-
-
 
 // // Відповідь
 // function rentalCarCost(d) {
@@ -77,7 +74,6 @@
 // console.log(formatString('Curabitur ligula sapien.'));
 // // повернеться оригінальний рядок
 
-
 // **************************
 
 /*  Дано список цілих чисел, визначте, парною чи непарною є сума його елементів.
@@ -99,7 +95,6 @@ Output: "even"
 
 // function oddOrEven(array) {
 // }
-
 
 // console.log(oddOrEven([0]));
 // // , 'even')
@@ -152,12 +147,10 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 
 // };
 
-
 // console.log(uniqueInOrder('AAAABBBCCDAABBB'));
 // console.log(uniqueInOrder(''));
 // console.log(uniqueInOrder(NaN));
 // console.log(uniqueInOrder('a,,bbbbb,,,,,c,,,'));
-
 
 // // // Відповідь
 
@@ -173,15 +166,14 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 //     return newArr;
 // };
 
-
 // **************************
 
 /*
  * Напиши скрипт для відображення часу дедлайну здачі проекту. Використовуй конструкцію if...else.
-* Якщо до дедлайну 0 днів - виведи рядок "Сьогодні"
-* Якщо до дедлайну 1 день - виведи рядок "Завтра"
-* Якщо до дедлайну 2 дні - виведи рядок "Післязавтра"
-* Якщо до дедлайну 3+ днів - виведи рядок "Дата в майбутньому"
+ * Якщо до дедлайну 0 днів - виведи рядок "Сьогодні"
+ * Якщо до дедлайну 1 день - виведи рядок "Завтра"
+ * Якщо до дедлайну 2 дні - виведи рядок "Післязавтра"
+ * Якщо до дедлайну 3+ днів - виведи рядок "Дата в майбутньому"
  */
 
 // const daysUntilDeadline = 2;
@@ -247,9 +239,6 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 //     return 'not found'
 // }
 
-
-
-
 // console.log(calcTotalPrice(stones, 'Ізумруд'));
 // console.log(calcTotalPrice(stones, 'Цегла'));
 
@@ -276,7 +265,6 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 // // "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
 // console.log(accum("HbideVbxncC"));
 // // "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
-
 
 // // Відповідь
 // function accum(s) {
@@ -316,18 +304,120 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 
 // console.log(multiplyNumeric(menu));
 
-
 //*********************
 
 //Напишіть функцію, яка перевіряє, чи є елемент саме простим об'єктом, а не масивом, null тощо.
 //Очікуваний результат: true якщо це об'єкт, false інакше. ({ a: 1 }) => true, ([1, 2, 3]) => false
 
 // const isPlainObject = data => {
-//     return typeof data === 'object' && !Array.isArray(data) && data !== null
-// }
+//     return typeof data === 'object' && !Array.isArray(data) && data !== null;
+// };
 
 // console.log(isPlainObject({ a: 1 })); // true
 // console.log(isPlainObject([])); // false
 // console.log(isPlainObject(null)); // false
 // console.log(isPlainObject(5))
 // console.log(isPlainObject(true))
+
+//*********************
+
+// Напиши функцію countProps(object), яка рахує і повертає кількість власних властивостей об'єкта в параметрі object. Використовуй змінну propCount для зберігання кількості властивостей об'єкта.
+
+// function countProps(object) {
+//     let propCount = 0;
+//     // Change code below this line
+//     const v = Object.keys(object);
+//     console.log(v);
+//     propCount = v.length;
+//     // Change code above this line
+//     return propCount;
+// }
+
+// console.log(countProps({ name: 'Mango', age: 2 }));
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+
+//*********************
+
+// const apartment = {
+//     descr: 'Spacious apartment in the city center',
+//     rating: 4,
+//     price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// for (let key of Object.keys(apartment)) {
+//     values.push(key);
+// }
+// const keys = apartment;
+// console.log(values);
+
+//*********************
+
+// function countTotalSalary(salaries) {
+//     let totalSalary = 0;
+//     // Change code below this line
+//     console.log(Object.values(salaries));
+//     const arr = Object.values(salaries);
+//     let total = arr.reduce((pV, s) => {
+//         return (pV += s);
+//     }, 0);
+//     console.log(total);
+//     // Change code above this line
+//     return totalSalary;
+// }
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// //  повертає 330
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// //  повертає 400
+
+//*********************
+
+// const colors = [
+//     { hex: '#f44336', rgb: '244,67,54' },
+//     { hex: '#2196f3', rgb: '33,150,243' },
+//     { hex: '#4caf50', rgb: '76,175,80' },
+//     { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (let color of colors) {
+//     hexColors.push(Object.values(color)[0]);
+//     rgbColors.push(Object.values(color)[1]);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+//*********************
+
+// const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//     // Change code below this line
+//     let price = null;
+//     products.forEach(el => {
+//         if (el.name === productName) {
+//             return (price = el.price);
+//         }
+//     });
+//     // Change code above this line
+//     return price;
+// }
+
+// console.log(getProductPrice('Radar'));
+// //  повертає 1300.
+// console.log(getProductPrice('Grip'));
+// //  повертає 1200.
+// console.log(getProductPrice('Scanner'));
+// //  повертає 2700.
+// console.log(getProductPrice('Droid'));
+// //  повертає 400.
+// console.log(getProductPrice('Engine'));
+// //  повертає null.
+
+//*********************
