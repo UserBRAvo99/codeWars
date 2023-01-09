@@ -295,3 +295,39 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 // }
 
 //*********************
+
+// //  Створіть функцію multiplyNumeric(obj), яка збільшує всі числові властивості об'єкта obj на 2.
+// // Зверніть увагу, що multiplyNumeric не потрібно нічого повертати. Слід безпосередньо змінювати об'єкт.
+// // P.S. Використовуйте тип, щоб перевірити, чи значення властивості числове.
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu",
+// }
+
+// const multiplyNumeric = menu => {
+//     for (let key in menu) {
+//         if (menu.hasOwnProperty(key) && typeof menu[key] === 'number') {
+//             menu[key] *=  2
+//     }
+//     }
+//     return menu
+// }
+
+// console.log(multiplyNumeric(menu));
+
+
+//*********************
+
+//Напишіть функцію, яка перевіряє, чи є елемент саме простим об'єктом, а не масивом, null тощо.
+//Очікуваний результат: true якщо це об'єкт, false інакше. ({ a: 1 }) => true, ([1, 2, 3]) => false
+
+// const isPlainObject = data => {
+//     return typeof data === 'object' && !Array.isArray(data) && data !== null
+// }
+
+// console.log(isPlainObject({ a: 1 })); // true
+// console.log(isPlainObject([])); // false
+// console.log(isPlainObject(null)); // false
+// console.log(isPlainObject(5))
+// console.log(isPlainObject(true))
