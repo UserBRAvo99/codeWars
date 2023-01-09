@@ -421,3 +421,56 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 // //  повертає null.
 
 //*********************
+
+// const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//     // Change code below this line
+//     const arr = [];
+//     products.forEach(el => {
+//         Object.keys(el).includes(propName) ? arr.push(el[propName]) : [];
+//     });
+//     return arr;
+//     // Change code above this line
+// }
+
+// console.log(getAllPropValues('name'));
+// //  повертає ["Radar", "Scanner", "Droid", "Grip"]
+// console.log(getAllPropValues('quantity'));
+// //  повертає [4, 3, 7, 9]
+// console.log(getAllPropValues('price'));
+// //  повертає [1300, 2700, 400, 1200]
+// console.log(getAllPropValues('category'));
+// //  повертає []
+
+//*********************
+
+// // Change code below this line
+// function findMatches(f, ...args) {
+//     const matches = []; // Don't change this line
+//     f.forEach(e => {
+//         args.forEach(el => {
+//             if (e === el) {
+//                 matches.push(e);
+//             }
+//         });
+//     });
+//     // Change code above this line
+//     return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// //  повертає [1, 2]
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// //  повертає [17, 89, 2]
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// //  повертає [24, 9, 41]
+// console.log(findMatches([63, 11, 8, 29], 4, 7, 16));
+// //  повертає []
+
+//*********************
