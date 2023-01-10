@@ -474,3 +474,197 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 // //  повертає []
 
 //*********************
+
+// const atTheOldToad = {
+//     potions: [
+//         { name: 'Speed potion', price: 460 },
+//         { name: 'Dragon breath', price: 780 },
+//         { name: 'Stone skin', price: 520 },
+//     ],
+//     // Change code below this line
+//     getPotions() {
+//         return this.potions;
+//     },
+//     addPotion(newPotion) {
+//         for (let potion of this.potions) {
+//             if (potion.name === newPotion.name)
+//                 return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//         }
+//         this.potions.push(newPotion);
+//     },
+//     removePotion(potionName) {
+//         for (let potion of this.potions) {
+//             if (potion.name === potionName) {
+//                 this.potions.splice(this.potions.indexOf(potion), 1);
+//             }
+//             return `Potion ${potionName} is not in inventory!`;
+//         }
+//     },
+//     updatePotionName(oldName, newName) {
+//         const potionIndex = this.potions.indexOf(oldName);
+
+//         if (potionIndex === -1) {
+//             return `Potion ${oldName} is not in inventory!`;
+//         }
+
+//         this.potions.splice(potionIndex, 1, newName);
+//     },
+//     // Change code above this line
+// };
+// console.log(atTheOldToad.getPotions());
+// // повертає[
+// //     ({ name: 'Speed potion', price: 460 },
+// //     { name: 'Dragon breath', price: 780 },
+// //     { name: 'Stone skin', price: 520 })
+// // ];
+// console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+// console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 780 }));
+// //  в масиві potions останнім елементом буде цей об'єкт
+// console.log(atTheOldToad.getPotions());
+
+//*********************
+
+//Напишіть програму на JavaScript, щоб отримати кількість всіх властивостей об'єктів в масиві
+// const library = [
+//     {
+//         title: 'Bill Gates',
+//         author: 'The Road Ahead',
+//         readingStatus: true,
+//     },
+//     {
+//         title: 'Steve Jobs',
+//         author: 'Walter Isaacson',
+//         readingStatus: true,
+//     },
+//     {
+//         title: 'Mockingjay: The Final Book of The Hunger Games',
+//         author: 'Suzanne Collins',
+//         readingStatus: false,
+//     },
+// ];
+// let totalItem = 0;
+// library.forEach(el => {
+//     totalItem += Object.keys(el).length;
+// });
+
+// console.log(totalItem);
+
+//********************* з лекціїї
+
+// 'use strict';
+
+// const people = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+// ];
+// //нарцис  'Jhon'
+
+// const people2 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: [],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+// //немає нарциса'
+
+// const people3 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Eva'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+// //немає нарциса
+
+// const people4 = [
+//     {
+//         name: 'Alex',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Jhon',
+//         know: [],
+//     },
+//     {
+//         name: 'Eva',
+//         know: ['Alex', 'Jhon'],
+//     },
+//     {
+//         name: 'Ivan',
+//         know: ['Jhon', 'Eva'],
+//     },
+// ];
+// //немає нарциса'
+
+// //Нарциса знають всі, нарцис незнає нікого
+
+// function findNar(peoples) {}
+
+// console.log(findNar(people));
+// console.log(findNar(people2));
+// console.log(findNar(people3));
+// console.log(findNar(people4));
+
+//*********************
+
+//Напишіть програму на JavaScript, щоб знайти найчастіший елемент масиву.
+// Приклад масиву: const arr2 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// Приклад виведення: а (5 разів)
+
+// const arr2 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// const newOdj = {};
+// arr2.forEach(el => {
+//     if (!newOdj[el]) {
+//         newOdj[el] = 1;
+//     } else {
+//         newOdj[el] += 1;
+//     }
+// });
+// console.log(newOdj);
+// let mValue = Math.max(...Object.values(newOdj));
+// console.log(mValue);
+// for (let el in newOdj) {
+//     if (newOdj[el] === mValue) {
+//         console.log(`${el} зустрічається ${mValue} разів.`);
+//         break;
+//     }
+// }
+
+//*********************
