@@ -823,35 +823,39 @@ X123456788   -->  false */
 //     }
 //     return iB;
 // }
-//*********************
+//********************* filter)))))))))))
 
-function arrayDiff(a, b) {
-    if (a.length === 0) {
-        return a;
-    } else if (b.length === 0) {
-        return a;
-    }
-    for (let i = 0; i < a.length; i++) {
-        b.forEach(eB => {
-            a.forEach((eA, iA) => {
-                if (eB === eA) {
-                    a.splice(iA, 1);
-                }
-            });
-        });
-    }
-    return a;
-}
+// function arrayDiff(a, b) {
+//     return a.filter(e => !b.includes(e));
+// }
 
-console.log(arrayDiff([1, 2], [1]));
-// , [2], 'a was [1,2], b was [1]');
-console.log(arrayDiff([1, 2, 2], [1]));
-// , [2, 2], 'a was [1,2,2], b was [1]');
-console.log(arrayDiff([1, 2, 2], [2]));
-// , [1], 'a was [1,2,2], b was [2]');
-console.log(arrayDiff([1, 2, 2], []));
-// , [1, 2, 2], 'a was [1,2,2], b was []');
-console.log(arrayDiff([], [1, 2]));
-// , [], 'a was [], b was [1,2]');
-console.log(arrayDiff([1, 2, 3], [1, 2]));
-// , [3], 'a was [1,2,3], b was [1,2]');
+// function arrayDiff(a, b) {
+//     if (a.length === 0) {
+//         return a;
+//     } else if (b.length === 0) {
+//         return a;
+//     }
+//     for (let i = 0; i < a.length; i++) {
+//         b.forEach(eB => {
+//             a.forEach((eA, iA) => {
+//                 if (eB === eA) {
+//                     a.splice(iA, 1);
+//                 }
+//             });
+//         });
+//     }
+//     return a;
+// }
+
+// console.log(arrayDiff([1, 2], [1]));
+// // , [2], 'a was [1,2], b was [1]');
+// console.log(arrayDiff([1, 2, 2], [1]));
+// // , [2, 2], 'a was [1,2,2], b was [1]');
+// console.log(arrayDiff([1, 2, 2], [2]));
+// // , [1], 'a was [1,2,2], b was [2]');
+// console.log(arrayDiff([1, 2, 2], []));
+// // , [1, 2, 2], 'a was [1,2,2], b was []');
+// console.log(arrayDiff([], [1, 2]));
+// // , [], 'a was [], b was [1,2]');
+// console.log(arrayDiff([1, 2, 3], [1, 2]));
+// // , [3], 'a was [1,2,3], b was [1,2]');
