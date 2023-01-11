@@ -631,15 +631,15 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 //         know: ['Jhon', 'Eva'],
 //     },
 // ];
-// //немає нарциса'
+// // //немає нарциса'
 
-// //Нарциса знають всі, нарцис незнає нікого
+// // //Нарциса знають всі, нарцис незнає нікого
 
 // function findNar(peoples) {}
 
-// console.log(findNar(people));
-// console.log(findNar(people2));
-// console.log(findNar(people3));
+// // console.log(findNar(people));
+// // console.log(findNar(people2));
+// // console.log(findNar(people3));
 // console.log(findNar(people4));
 
 //*********************
@@ -668,3 +668,190 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
 // }
 
 //*********************
+
+// var summation = function (num) {
+//     let t = 0;
+//     console.log(num);
+//     for (let i = 0; i <= num; i += 1) {
+//         t += i;
+//     }
+//     console.log(t);
+// };
+
+// console.log(summation(1));
+// // ,  1);
+// console.log(summation(2));
+// // ,  3);
+// console.log(summation(8));
+// // , 36);
+
+//*********************
+
+// // 1. Напишіть дві функції
+// // letMeSeeYourName(callback) - запитує ім'я користувача
+// //через prompt та викликає callback функцію
+// //greet(name) - коллбек, що приймає ім'я і логірує в консоль
+// //Рядок "Привіт <name>"
+// //Реалізуй перевірку, що prompt не порожній
+// const letMeSeeYourName = callback => {
+//     const yourName = prompt(`Введи своє ім'я:`);
+//     // if (yourName !== '') {
+//     //     callback(yourName);
+//     // }
+//     yourName.trim() && callback(yourName);
+// };
+// const greet = name => {
+//     console.log(`Привіт ${name}`);
+// };
+// letMeSeeYourName(greet);
+
+//********************* Замикання функції!!!!
+
+// 7. Напишіть функцію savePassword(password), яка приймає
+//пароль і повертає внутрішню функцію, що приймає
+//рядок і повертає буль true, якщо рядок збігається зі збереженим
+//паролем і false - якщо не збігається
+
+// const savePassword = password => {
+//     return userPassword => {
+//         return password === userPassword;
+//     };
+// };
+// const userPassword = savePassword('admin');
+
+// console.log(userPassword('admin'));
+
+//*********************
+
+/*Ідентифікатори ISBN-10 складаються з десяти цифр. Перші дев'ять символів є цифрами 0-9. Остання цифра може бути 0-9або X, щоб вказати значення 10.
+
+Номер ISBN-10 є дійсним, якщо сума цифр, помножена на їхню позицію за модулем 11, дорівнює нулю.
+
+Наприклад:
+
+ISBN     : 1 1 1 2 2 2 3 3 3  9
+position : 1 2 3 4 5 6 7 8 9 10
+Це дійсний ISBN, оскільки:
+
+(1*1 + 1*2 + 1*3 + 2*4 + 2*5 + 2*6 + 3*7 + 3*8 + 3*9 + 9*10) % 11 = 0
+Приклади
+1112223339   -->  true
+111222333    -->  false
+1112223339X  -->  false
+1234554321   -->  true
+1234512345   -->  false
+048665088X   -->  true
+X123456788   -->  false */
+
+// function validISBN10(isbn) {}
+
+// Рішення
+
+// function validISBN10(isbn) {
+//     const newArr = [];
+//     let t = 0;
+//     let isbnBoolean = true;
+//     if (isbn.split('').length !== 10) {
+//         return (isbnBoolean = false);
+//     }
+//     isbn.split('').forEach((e, i) => {
+//         if (e === 'X' && i === 9) {
+//             newArr.push(10);
+//         } else if (e == Number(e)) {
+//             newArr.push(Number(e));
+//         }
+//     });
+//     if (newArr.length !== 10) {
+//         return (isbnBoolean = false);
+//     }
+
+//     for (let i = 0; i < newArr.length; i += 1) {
+//         t += newArr[i] * (i + 1);
+//     }
+//     if (t % 11 !== 0) {
+//         return (isbnBoolean = false);
+//     }
+//     return isbnBoolean;
+// }
+
+// Виклик з перевіркою
+
+// console.log(validISBN10('1112223339'));
+// // ', true],
+// console.log(validISBN10('048665088X'));
+// // ', true],
+// console.log(validISBN10('1293000000'));
+// // ', true],
+// console.log(validISBN10('1234554321'));
+// // ', true],
+// console.log(validISBN10('1234512345'));
+// // ', false],
+// console.log(validISBN10('1293'));
+// // ', false],
+// console.log(validISBN10('X123456788'));
+// // // ', false],
+// console.log(validISBN10('ABCDEFGHIJ'));
+// // ', false],
+// console.log(validISBN10('XXXXXXXXXX'));
+// // ', false],
+// console.log(validISBN10('048665088XZ'));
+// // ', false];
+
+// Рішення яке записав в CW
+// function validISBN10(isbn) {
+//     const nA = [];
+//     let t = 0;
+//     let iB = true;
+//     if (isbn.split('').length !== 10) {
+//         return (ib = false);
+//     }
+//     isbn.split('').forEach((e, i) => {
+//         if (e === 'X' && i === 9) {
+//             nA.push(10);
+//         } else if (e == Number(e)) {
+//             nA.push(Number(e));
+//         }
+//     });
+//     if (nA.length !== 10) {
+//         return (iB = false);
+//     }
+//     for (let i = 0; i < nA.length; i += 1) {
+//         t += nA[i] * (i + 1);
+//     }
+//     if (t % 11 !== 0) {
+//         return (iB = false);
+//     }
+//     return iB;
+// }
+//*********************
+
+function arrayDiff(a, b) {
+    if (a.length === 0) {
+        return a;
+    } else if (b.length === 0) {
+        return a;
+    }
+    for (let i = 0; i < a.length; i++) {
+        b.forEach(eB => {
+            a.forEach((eA, iA) => {
+                if (eB === eA) {
+                    a.splice(iA, 1);
+                }
+            });
+        });
+    }
+    return a;
+}
+
+console.log(arrayDiff([1, 2], [1]));
+// , [2], 'a was [1,2], b was [1]');
+console.log(arrayDiff([1, 2, 2], [1]));
+// , [2, 2], 'a was [1,2,2], b was [1]');
+console.log(arrayDiff([1, 2, 2], [2]));
+// , [1], 'a was [1,2,2], b was [2]');
+console.log(arrayDiff([1, 2, 2], []));
+// , [1, 2, 2], 'a was [1,2,2], b was []');
+console.log(arrayDiff([], [1, 2]));
+// , [], 'a was [], b was [1,2]');
+console.log(arrayDiff([1, 2, 3], [1, 2]));
+// , [3], 'a was [1,2,3], b was [1,2]');
