@@ -859,3 +859,171 @@ X123456788   -->  false */
 // // , [], 'a was [], b was [1,2]');
 // console.log(arrayDiff([1, 2, 3], [1, 2]));
 // // , [3], 'a was [1,2,3], b was [1,2]');
+
+//*********************
+
+// //1 (map()) Потрібно отримати масив імен студентів та записати їх великими літерами.
+// let studentRecords = [
+//     { name: 'John', id: 123, marks: 98 },
+//     { name: 'Baba', id: 101, marks: 23 },
+//     { name: 'yaga', id: 200, marks: 45 },
+//     { name: 'Wick', id: 115, marks: 75 },
+// ];
+
+// const newArr = studentRecords.map(e => {
+//     return e.name.toUpperCase();
+// });
+// console.log(newArr);
+
+//*********************
+
+//2 (filter()) Припустимо, що ми маємо той самий набір даних, що й вище, але цього разу ми хочемо
+//отримати детальну інформацію про студентів, які набрали більше 50 балів.
+// let studentRecords = [
+//     { name: 'John', id: 123, marks: 98 },
+//     { name: 'Baba', id: 101, marks: 23 },
+//     { name: 'yaga', id: 200, marks: 45 },
+//     { name: 'Wick', id: 115, marks: 75 },
+// ];
+
+// const nA = studentRecords.filter(e => {
+//     return e.marks < 50;
+// });
+// console.log(nA);
+
+//*********************
+
+//4 (map(), filter()) Необхідно отримати лише імена студентів, які набрали більше 50 балів із того ж набору
+//даних.
+// let studentRecords = [
+//     { name: 'John', id: 123, marks: 98 },
+//     { name: 'Baba', id: 101, marks: 23 },
+//     { name: 'yaga', id: 200, marks: 45 },
+//     { name: 'Wick', id: 115, marks: 75 },
+// ];
+// const nameStudent = studentRecords.filter(({ marks }) => marks > 50).map(({ name }) => name);
+
+// console.log(nameStudent);
+
+//*********************
+
+// function changeEven(numbers, value) {
+//     // Change code below this line
+//     return numbers.map(e => (e % 2 === 0 ? e + value : e));
+//     // Change code above this line
+// }
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+
+//*********************
+
+// const books = [
+//     {
+//         title: 'The Last Kingdom',
+//         author: 'Bernard Cornwell',
+//         genres: ['adventure', 'history'],
+//     },
+//     {
+//         title: 'Beside Still Waters',
+//         author: 'Robert Sheckley',
+//         genres: ['fiction', 'mysticism'],
+//     },
+//     {
+//         title: 'Redder Than Blood',
+//         author: 'Tanith Lee',
+//         genres: ['horror', 'mysticism', 'adventure'],
+//     },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(({ genres }) => genres);
+// const uniqueGenres = allGenres.filter((e, i, a) => {
+//     return a.indexOf(e) === i;
+// });
+// console.log(allGenres);
+// console.log(uniqueGenres);
+
+//*********************
+
+// const users = [
+//     {
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         gender: 'male',
+//         age: 37,
+//     },
+//     {
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         gender: 'female',
+//         age: 34,
+//     },
+//     {
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         gender: 'male',
+//         age: 24,
+//     },
+//     {
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         gender: 'female',
+//         age: 21,
+//     },
+//     {
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong'],
+//         isActive: true,
+//         balance: 3951,
+//         gender: 'male',
+//         age: 27,
+//     },
+//     {
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//         isActive: false,
+//         balance: 1498,
+//         gender: 'male',
+//         age: 38,
+//     },
+//     {
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         gender: 'female',
+//         age: 39,
+//     },
+// ];
+
+// // Change code below this line
+// const getFriends = users => [...new Set(users.flatMap(({ friends }) => friends))];
+// // Change code above this line
+
+// console.log(getFriends(users));
+
+//*********************
