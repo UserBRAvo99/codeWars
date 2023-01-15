@@ -1056,3 +1056,173 @@ X123456788   -->  false */
 // console.log(bookByAuthor);
 
 //*********************
+
+// const users = [
+//     {
+//         name: 'Moore Hensley',
+//         email: 'moorehensley@indexia.com',
+//         eyeColor: 'blue',
+//         friends: ['Sharron Pace'],
+//         isActive: false,
+//         balance: 2811,
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Sharlene Bush',
+//         email: 'sharlenebush@tubesys.com',
+//         eyeColor: 'blue',
+//         friends: ['Briana Decker', 'Sharron Pace'],
+//         isActive: true,
+//         balance: 3821,
+//         gender: 'female',
+//     },
+//     {
+//         name: 'Ross Vazquez',
+//         email: 'rossvazquez@xinware.com',
+//         eyeColor: 'green',
+//         friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//         isActive: false,
+//         balance: 3793,
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Elma Head',
+//         email: 'elmahead@omatom.com',
+//         eyeColor: 'green',
+//         friends: ['Goldie Gentry', 'Aisha Tran'],
+//         isActive: true,
+//         balance: 2278,
+//         gender: 'female',
+//     },
+//     {
+//         name: 'Carey Barr',
+//         email: 'careybarr@nurali.com',
+//         eyeColor: 'blue',
+//         friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+//         isActive: true,
+//         balance: 3951,
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Blackburn Dotson',
+//         email: 'blackburndotson@furnigeer.com',
+//         eyeColor: 'brown',
+//         friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
+//         isActive: false,
+//         balance: 1498,
+//         gender: 'male',
+//     },
+//     {
+//         name: 'Sheree Anthony',
+//         email: 'shereeanthony@kog.com',
+//         eyeColor: 'brown',
+//         friends: ['Goldie Gentry', 'Briana Decker'],
+//         isActive: true,
+//         balance: 2764,
+//         gender: 'female',
+//     },
+// ];
+
+// const getNamesSortedByFriendCount = users =>
+//     [...users].sort((a, b) => a.friends.length - b.friends.length).map(({ name }) => name);
+// console.log(getNamesSortedByFriendCount(users));
+
+//*********************
+
+// Виправте помилки, щоб код працював
+// const product = {
+//     price: 5000,
+//     showPrice() {
+//       console.log(this.price);
+//     },
+//   };
+
+//   function callAction(action) {
+//     action();
+//   }
+
+// callAction(product.showPrice);
+
+// Виправте помилки, щоб код працював
+// const product = {
+//     price: 5000,
+//     showPrice() {
+//         console.log(this.price);
+//     },
+// };
+
+// function callAction(action) {
+//     action();
+// }
+
+// console.log(callAction(product.showPrice.bind(product)));
+
+//*********************
+
+// const numbers = [1, 5, 6, 8, 7, 4, 1, 6, 98];
+// console.log(Math.max(...numbers));
+// console.log(Math.max.apply(null, numbers));
+
+// function sum(a, b) {
+//     console.log(a + b);
+// }
+
+// sum(5, 10);
+
+// sum.apply(null, [5, 9]);
+
+//*********************
+// /* Умова для задачі*/
+// /*Крокетний клуб Western Suburbs має дві категорії членства: старше та відкрите. Їм потрібна ваша допомога з аплікаційною формою, у якій потенційним членам буде вказано, до якої категорії вони будуть призначені.
+
+// Щоб бути старшим, член повинен бути не менше 55 років і мати гандикап більше 7. У цьому крокетному клубі гандикап коливається від -2 до +26; чим кращий гравець, тим нижчий гандикап.
+
+// Введення
+// Вхідні дані складатимуться зі списку пар. Кожна пара містить інформацію про одного потенційного члена. Інформація складається з цілого числа для віку людини та цілого числа для вади людини.
+
+// Вихід
+// Вихідні дані складатимуться зі списку рядкових значень (у Haskell та C: Openабо Senior), які вказуватимуть, чи слід помістити відповідного члена у старшу чи відкриту категорію.
+
+// приклад
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"] */
+
+// /*Вирішення за допомогою forEach*/
+// function openOrSenior(data) {
+//     const newArr = [];
+//     data.forEach(e => (e[0] >= 55 && e[1] >= 7 ? newArr.push('Senior') : newArr.push('Open')));
+//     return newArr;
+// }
+// /*Вирішення за допомогою map*/
+// function openOrSenior(data) {
+//     return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? 'Senior' : 'Open'));
+// }
+// console.log(
+//     openOrSenior([
+//         [45, 12],
+//         [55, 21],
+//         [19, -2],
+//         [104, 20],
+//     ])
+// );
+// // ,['Open', 'Senior', 'Open', 'Senior'])
+// console.log(
+//     openOrSenior([
+//         [3, 12],
+//         [55, 1],
+//         [91, -2],
+//         [53, 23],
+//     ])
+// );
+// // ,['Open', 'Open', 'Open', 'Open'])
+// console.log(
+//     openOrSenior([
+//         [59, 12],
+//         [55, -1],
+//         [12, -2],
+//         [12, 12],
+//     ])
+// );
+// // ,['Senior', 'Open', 'Open', 'Open'])
+
+//*********************
