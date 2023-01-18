@@ -1226,3 +1226,393 @@ X123456788   -->  false */
 // // ,['Senior', 'Open', 'Open', 'Open'])
 
 //*********************
+
+// // Створюю функцію конструктор яка має неазву(іменник) та починається з великої літери
+// //аргументи які приймає конструктор, деструктуризуємо одразу
+// const Car = function ({ brand, model, price }) {
+//     //Функція викликається в контексі створеного об'єкту тобто в this записуэться посилання на нього
+//     //Після закінчення роботи функції, всі значення вона переносить в новий об'єкт
+//     (this.brand = brand), (this.model = model), (this.price = price);
+// };
+// //Після всих записів ми додаємо новий метод до нашої функції конструктора
+// //Тепер в прототипі у кожного обєкта буде функція sayHi
+// Car.prototype.sayHi = function () {
+//     console.log('Car.prototype.sayHi -> this', this);
+//     console.log('Hello :)');
+// };
+
+// // Створюю змінну в якій буде посилання на ланку в пам'яті де буде знаходитися копія об'кту
+// // при такому створенні копії є необхідний оператор new (який робить всю цю магію)
+// //Далі передаємо нові значення які запишуться в новий об'єкт
+// const myCar = new Car({
+//     brand: 'Audi',
+//     model: 'Q4',
+//     price: 36000,
+// });
+// //Викликаємо змінну в яку записоно посилання на об'єкт
+// console.log(myCar);
+// //По ланцюжку прототипів ми зможемо звернутися до цієї функції з кожного екземпляра хоча на самому екземплярі цієї функції немає, this функції sayHi буде ссилатися на контекст викликаної функції
+// myCar.sayHi();
+// // Так ми можемо робити безліч разів з різними автіками, створюючи нові об'єкти в конструкторі
+// const myCar2 = new Car({
+//     brand: 'BMW',
+//     model: 'H',
+//     price: 25000,
+// });
+// console.log(myCar2);
+// myCar2.sayHi();
+
+// const myCar3 = new Car({
+//     brand: 'Ford',
+//     model: 'Focus',
+//     price: 10000,
+// });
+// console.log(myCar3);
+// myCar3.sayHi();
+// //Кожен maCar - це екземпляр
+
+//*********************
+
+//Створивши клас NamedOne, яка приймає ім’я та прізвище як параметри та повертає
+//об’єкт із властивостями firstName, lastName і fullName ( = firstName + пробіл +
+//lastName ), які мають бути доступними.
+
+// class NamedOne {
+//     constructor(firstName, lastName) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+//     get fullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// var namedOne = new NamedOne('Naomi', 'Wang');
+// console.log(namedOne.firstName); // -> "Naomi"
+// console.log(namedOne.lastName); // -> "Wang"
+// console.log(namedOne.fullName); // -> "Naomi Wang"
+
+//*********************
+
+//Реалізуйте клас Worker (Працівник), який матиме такі властивості: name (ім'я),
+//surname (прізвище), rate (ставка за день роботи), days (кількість відпрацьованих
+//днів). Також клас повинен мати метод getSalary(), який виводитиме зарплату
+//працівника. Зарплата - це добуток (множення) ставки rate на кількість
+//відпрацьованих днів days. І метод getFullName() - ім'я та прізвище працівника.
+
+// class Worker {
+//     constructor(name, surname, rate, days) {
+//         this.name = name;
+//         this.surname = surname;
+//         this.rate = rate;
+//         this.days = days;
+//     }
+//     getSalary() {
+//         return this.rate * this.days;
+//     }
+//     get getFullName() {
+//         return `${this.name} ${this.surname}`;
+//     }
+//     set getFullName(value) {
+//         this.name = value;
+//         console.log(this.name);
+//     }
+// }
+
+// const worker = new Worker('Іван', 'Іванов', 10, 31);
+
+// console.log(worker.name);
+// //Виведе 'Іван'
+// console.log(worker.surname);
+// //Виведе 'Іванов'
+// console.log(worker.getFullName);
+// //Виведе 'Іванов Іван'
+// console.log(worker.rate);
+// //Виведе 10
+// console.log(worker.days);
+// //Виведе 31
+// console.log(worker.getSalary());
+// //Виведе 310 - тобто 10 * 31
+// worker.getFullName = 'Poly';
+// worker.getFullName = 'Mango';
+
+//Напишіть новий клас Boss, цей клас успадковується від класу Worker та минулого
+//завдання. З'являється нові властивості: workers - кількість працівників.
+//І зарплата вважається інакше: добуток (множення) ставки rate на кількість
+//відпрацьованих днів і кількість працівників.
+
+// class Boss extends Worker {
+//     constructor(name, surname, rate, days, workers) {
+//         super(name, surname, rate, days);
+//         this.workers = workers;
+//     }
+//     getSalary() {
+//         return this.rate * this.days * this.workers;
+//     }
+// }
+
+// const boss = new Boss('Іван', 'Іванов', 10, 31, 10);
+// console.log(boss.name); //Виведе 'Іван'
+// console.log(boss.surname); //Виведе 'Іванов'
+// console.log(boss.getFullName); //Виведе 'Іванов Іван'
+// console.log(boss.rate); //Виведе 10
+// console.log(boss.days); //Виведе 31
+// console.log(boss.workers); //Виведе 10
+// console.log(boss.getSalary()); //Виведе 3100 - тобто 10 * 31 * 10
+
+//*********************
+
+/*
+  Клієнт
+  Напиши клас Client який створює об'єкт із властивостями login та email.
+  login має бути суспільною властивістю, а email приватним.
+  Доступ до email зроби через геттер та сетер.
+  Перед тим як змінити емейл, у сеттері потрібно викликати приватний метод, який валідуватиме імейл (наявність собачки та крапки).
+  Якщо імейл невалідний – нічого не робити і вивести в консоль 'Email is not valid!'
+*/
+
+// class Client {
+//     #email;
+//     constructor(login, email) {
+//         this.#email = email;
+//         this.login = login;
+//     }
+//     get email() {
+//         return this.#email;
+//     }
+//     set email(newEmail) {
+//         if (this.#validator(newEmail)) {
+//             this.#email = newEmail;
+//         } else {
+//             console.log('Email is not valid!');
+//         }
+//     }
+//     #validator(newEmail) {
+//         return newEmail.includes('@');
+//     }
+// }
+// const client = new Client('user', 'qwe@gmail.com');
+// client.email = 'qweq@Gmail.com';
+// console.log(client.email);
+
+//*********************
+
+// class Calculator {
+//     constructor() {
+//         this.a = 0;
+//     }
+//     number(a) {
+//         this.a = a;
+//         return this;
+//     }
+//     add(num) {
+//         this.a += num;
+//         return this;
+//     }
+//     substruct(num) {
+//         this.a -= num;
+//         return this;
+//     }
+//     divide(num) {
+//         this.a /= num;
+//         return this;
+//     }
+//     multiply(num) {
+//         this.a *= num;
+//         return this;
+//     }
+//     get result() {
+//         return this.a;
+//     }
+// }
+// const calculator = new Calculator();
+// calculator.number(4).add(10).substruct(3).multiply(3).divide(11);
+// console.log(calculator.result);
+// console.log(calculator);
+
+//*********************
+
+// class Car {
+//     // Change code below this line
+//     #price;
+//     static MAX_PRICE = 50000;
+//     constructor({ price }) {
+//         this.#price = price;
+//     }
+
+//     get price() {
+//         return this.#price;
+//     }
+
+//     set price(newPrice) {
+//         // чому не працює , якщо Car.MAX_PRICE замінити на this.MAX_PRICE
+//         if (newPrice < Car.MAX_PRICE) {
+//             return (this.#price = newPrice);
+//         }
+//         return this.#price;
+//     }
+//     // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+//*********************
+
+// Натискання на кнопку "SHOW ME" має виводити значення з поля введення в alert
+
+// {/* <div>
+//     <button id="alertButton">SHOW ME</button>
+//     <input id="alertInput" type="text" />
+// </div> */}
+
+// const showMeEl = document.querySelector('#alertButton');
+// const inputShowMeEl = document.querySelector('#alertInput');
+
+// showMeEl.addEventListener('click', () => {
+//     const value = inputShowMeEl.value.trim();
+//     if (!value) return;
+//     alert(value);
+// });
+
+//*********************
+/*
+Задача 3
+
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+
+    <div>
+        <input id="passwordInput" type="text">
+        <button id="passwordButton">Приховати</button>
+    </div>
+
+*/
+
+// const InputEl = document.querySelector('#passwordInput');
+// const btnEl = document.querySelector('#passwordButton');
+
+// btnEl.addEventListener('click', () => {
+//     // if (InputEl.type === 'text') {
+//     //     InputEl.setAttribute('type', 'password');
+//     //     btnEl.textContent = 'Розкрити';
+//     // } else {
+//     //     InputEl.setAttribute('type', 'text');
+//     //     btnEl.textContent = 'Приховати';
+//     // }
+//     const flag = InputEl.type;
+//     InputEl.type = flag === 'text' ? 'password' : 'text';
+//     btnEl.textContent = flag === 'text' ? 'Розкрити' : 'Приховати';
+// });
+
+//*********************
+
+/*
+
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+
+
+    <div>
+        <ul class="list">
+            <li class="listItem">1</li>
+            <li class="listItem">4</li>
+            <li class="listItem">8</li>
+            <li class="listItem">16</li>
+            <li class="listItem">20</li>
+            <li class="listItem">30</li>
+        </ul>
+        <button id="double">Удвоить</button>
+    </div>
+
+*/
+
+// const listEl = document.querySelector('.list');
+// const dtnEl = document.querySelector('#double');
+
+// const liArr = [...listEl.children];
+
+// dtnEl.addEventListener('click', () => {
+//     liArr.forEach(el => {
+//         el.textContent *= 2;
+//     });
+// });
+
+//*********************
+
+// Кнопка "Зменшити" робить квадрат менше на 10 пікселів, допопка "Збільшити" - більше на 10 пікселів.
+
+//     <div>
+//         <div id="box"></div>
+//         <button id="decrease">Зменшити</button>
+//         <button id="increase">Збільшити</button>
+//     </div>
+
+// const btnDecreaseEl = document.querySelector('#decrease');
+// const btnincreaseEl = document.querySelector('#increase');
+// const boxEl = document.querySelector('#box');
+// let boxSize = boxEl.clientWidth;
+
+// const apdateBox = function () {
+//     //
+//     // boxEl.style.width = boxSize + 'px';
+//     // boxEl.style.height = boxSize + 'px';
+//     // інлайнові стилі
+//     boxEl.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; border: solid red 1px;`;
+// };
+
+// btnDecreaseEl.addEventListener('click', () => {
+//     boxSize -= 10;
+//     apdateBox();
+// });
+// btnincreaseEl.addEventListener('click', () => {
+//     boxSize += 10;
+//     apdateBox();
+// });
+
+//*********************
+
+/*
+Задача 8
+При натисканні на кожну з кнопок підсумовуються значення з data-атрибутів.
+За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
+інформацією про те, яка кнопка була натиснута скільки разів.
+    <div>
+        <div class="statList">
+            <button class="calcButton" data-number=5>Button #1</button>
+            <button class="calcButton" data-number=2>Button #2</button>
+            <button class="calcButton" data-number=10>Button #3</button>
+            <button class="calcButton" data-number=50>Button #4</button>
+            <button class="calcButton" data-number=0>Button #5</button>
+            <button class="calcButton" data-number=20>Button #6</button>
+        </div>
+        <button id="resultButton">Вывести результат</button>
+        <div id="resultSection"></div>
+    </div>
+*/
+//ДЕлегування - пройом!!!
+const statListEl = document.querySelector('.statList');
+// якщо закоментувати цей код, все працюватиме. Але при id можна записати на пряму(працює тільки з id) , то му що цей айдішнік записується на глобальний об'єкт. Та погіршується читаємість коду(краще не використовувати)
+const resultButton = document.querySelector('#resultButton');
+const resultSectionEl = document.querySelector('#resultSection');
+
+let counterValue = 0;
+
+statListEl.addEventListener('click', event => {
+    // Перевіряємо чи працює подія і на яких елементах
+    // console.log(event.target);
+    // Перевірка щоб не попасти між кнопок
+    if (!event.target.classList.contains('calcButton')) return;
+    // Звертажмось до data кнопки через dataset.number (завжди повертає рядок)
+    const dataNumber = Number(event.target.dataset.number);
+    counterValue += dataNumber;
+});
+
+resultButton.addEventListener('click', () => {
+    resultSectionEl.textContent = counterValue;
+});
