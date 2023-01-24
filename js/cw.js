@@ -1596,23 +1596,25 @@ X123456788   -->  false */
     </div>
 */
 //ДЕлегування - пройом!!!
-const statListEl = document.querySelector('.statList');
-// якщо закоментувати цей код, все працюватиме. Але при id можна записати на пряму(працює тільки з id) , то му що цей айдішнік записується на глобальний об'єкт. Та погіршується читаємість коду(краще не використовувати)
-const resultButton = document.querySelector('#resultButton');
-const resultSectionEl = document.querySelector('#resultSection');
+// const statListEl = document.querySelector('.statList');
+// // якщо закоментувати цей код, все працюватиме. Але при id можна записати на пряму(працює тільки з id) , то му що цей айдішнік записується на глобальний об'єкт. Та погіршується читаємість коду(краще не використовувати)
+// const resultButton = document.querySelector('#resultButton');
+// const resultSectionEl = document.querySelector('#resultSection');
 
-let counterValue = 0;
+// let counterValue = 0;
 
-statListEl.addEventListener('click', event => {
-    // Перевіряємо чи працює подія і на яких елементах
-    // console.log(event.target);
-    // Перевірка щоб не попасти між кнопок
-    if (!event.target.classList.contains('calcButton')) return;
-    // Звертажмось до data кнопки через dataset.number (завжди повертає рядок)
-    const dataNumber = Number(event.target.dataset.number);
-    counterValue += dataNumber;
-});
+// statListEl.addEventListener('click', event => {
+//     // Перевіряємо чи працює подія і на яких елементах
+//     // console.log(event.target);
+//     // Перевірка щоб не попасти між кнопок
+//     if (!event.target.classList.contains('calcButton')) return;
+//     // Звертажмось до data кнопки через dataset.number (завжди повертає рядок)
+//     const dataNumber = Number(event.target.dataset.number);
+//     counterValue += dataNumber;
+// });
 
-resultButton.addEventListener('click', () => {
-    resultSectionEl.textContent = counterValue;
-});
+// resultButton.addEventListener('click', () => {
+//     resultSectionEl.textContent = counterValue;
+// });
+
+//*********************
