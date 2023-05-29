@@ -1639,3 +1639,38 @@ X123456788   -->  false */
 //     });
 // }
 // makePromise().then(console.log).catch(console.log);
+//
+//
+//
+//
+let recipe = { flour: 500, sugar: 200, eggs: 1 };
+let available = { flour: 1200, sugar: 1200, eggs: 5, milk: 200 };
+
+// let recipe = { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 };
+// let available = { sugar: 500, flour: 2000, milk: 2000 };
+
+function cakes(recipe, available) {
+    const total = [];
+
+    // if (Object.entries(recipe).length > Object.entries(available).length) {
+    //     return 0;
+    // }
+    Object.entries(recipe).forEach(elemR => {
+        Object.entries(available).forEach(elemA => {
+            if (elemR[0] === elemA[0]) {
+                if (elemA[1] > elemR[1]) {
+                    return total.push(Math.round(elemA[1] / elemR[1]));
+                }
+                if (elemA[1] < elemR[1]) {
+                    return total.push(Math.round(elemR[1] / elemA[1]));
+                }
+            }
+        });
+    });
+    return Math.min(...total);
+}
+// assert.equal(cakes(recipe, available), 2);
+
+// recipe = { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 };
+// available = { sugar: 500, flour: 2000, milk: 2000 };
+console.log(cakes(recipe, available));
