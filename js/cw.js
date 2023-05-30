@@ -1643,3 +1643,123 @@ X123456788   -->  false */
 //
 //
 //
+// Цього разу ми хочемо написати обчислення за допомогою функцій і отримати результати. Давайте розглянемо кілька прикладів:
+
+// seven(times(five())); // must return 35
+// four(plus(nine())); // must return 13
+// eight(minus(three())); // must return 5
+// six(dividedBy(two())); // must return 3
+// Вимоги:
+
+// Повинна бути функція для кожного числа від 0 ("нуль") до 9 ("дев'ять")
+// Повинна існувати функція для кожної з наступних математичних операцій: плюс, мінус, рази, розділене на
+// Кожне обчислення складається рівно з однієї операції та двох чисел
+// Найбільш зовнішня функція представляє лівий операнд, найбільш внутрішня функція представляє правий операнд
+// Ділення має бути цілим . Наприклад, це має повертати 2, а не 2.666666...:
+// eight(dividedBy(three()));
+//
+//
+//
+//
+// function zero() {}
+// function one() {}
+// function two() {}
+// function three() {}
+// function four() {}
+// function five() {}
+// function six() {}
+// function seven() {}
+// function eight() {}
+// function nine() {}
+
+// function plus() {}
+// function minus() {}
+// function times() {}
+// function dividedBy() {}
+
+// console.log(seven(times(five())));
+// // , 35);
+// console.log(four(plus(nine())));
+// // , 13);
+// console.log(eight(minus(three())));
+// // , 5);
+// console.log(six(dividedBy(two())));
+// // , 3);
+//
+//
+//
+//
+// function zero(n) {
+//     if (n === undefined) return 0;
+//     return sN([0, n[0], n[1]]);
+// }
+// function one(n) {
+//     if (n === undefined) return 1;
+//     return sN([1, n[0], n[1]]);
+// }
+// function two(n) {
+//     if (n === undefined) return 2;
+//     return sN([2, n[0], n[1]]);
+// }
+// function three(n) {
+//     if (n === undefined) return 3;
+//     return sN([3, n[0], n[1]]);
+// }
+// function four(n) {
+//     if (n === undefined) return 4;
+//     return sN([4, n[0], n[1]]);
+// }
+// function five(n) {
+//     if (n === undefined) return 5;
+//     return sN([5, n[0], n[1]]);
+// }
+// function six(n) {
+//     if (n === undefined) return 6;
+//     return sN([6, n[0], n[1]]);
+// }
+// function seven(n) {
+//     if (n === undefined) return 7;
+//     return sN([7, n[0], n[1]]);
+// }
+// function eight(n) {
+//     if (n === undefined) return 8;
+//     return sN([8, n[0], n[1]]);
+// }
+// function nine(n) {
+//     if (n === undefined) return 9;
+//     return sN([9, n[0], n[1]]);
+// }
+
+// function plus(n) {
+//     return [n, 'p'];
+// }
+// function minus(n) {
+//     return [n, 'm'];
+// }
+// function times(n) {
+//     return [n, 't'];
+// }
+// function dividedBy(n) {
+//     return [n, 'd'];
+// }
+
+// function sN(ar) {
+//     let a = ar[0];
+//     let b = ar[1];
+//     let ac = ar[2];
+//     let t = 0;
+//     //   if(a < b) {
+//     //     a = ar[1]
+//     //     b = ar[0]
+//     //   }
+//     ac === 'p'
+//         ? (t = a + b)
+//         : ac === 'm'
+//         ? (t = a - b)
+//         : ac === 't'
+//         ? (t = a * b)
+//         : ac === 'd'
+//         ? (t = a / b)
+//         : a;
+//     return Number.parseInt(t);
+// }
