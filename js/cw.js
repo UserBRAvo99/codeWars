@@ -1763,3 +1763,31 @@ X123456788   -->  false */
 //         : a;
 //     return Number.parseInt(t);
 // }
+//
+//
+//
+// function hexStringToRGB(hexString) {
+//     const string = hexString.split('').slice(1);
+//     return {
+//         r: parseInt(string[0] + string[1], 16),
+//         g: parseInt(string[2] + string[3], 16),
+//         b: parseInt(string[4] + string[5], 16),
+//     };
+// }
+
+// console.log(hexStringToRGB('#FF9933'));
+// // { r: 255, g: 153, b: 51 };
+//
+//
+//
+//
+//
+// function sumStrings(a, b) {
+//     return (BigInt(a) + BigInt(b)).toString();
+// }
+//
+//
+//
+//
+//
+//
