@@ -1790,4 +1790,27 @@ X123456788   -->  false */
 //
 //
 //
+// The soul of wit: reverse an array
+// const reverse = a => {
+//     const newArr = [];
+//     a.forEach(n => {
+//         newArr.unshift(n);
+//     });
+//     return newArr;
+// };
 //
+//
+// const reverse = a => a.map((_, i) => a[a.length - 1 - i]);
+//
+// const reverse = a => [...a].map(a.pop, a);
+//
+//
+//  The soul of wit: reverse an array
+const reverse = a => a.sort();
+
+console.log(reverse([1, 2, 3]));
+// , [3, 2, 1]);
+// console.log(reverse([...'01234567890123456789']));
+// // , [...'98765432109876543210']);
+// console.log(reverse([0, undefined]));
+// // , [undefined, 0]);
