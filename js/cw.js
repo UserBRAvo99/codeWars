@@ -1805,8 +1805,6 @@ X123456788   -->  false */
 // const reverse = a => [...a].map(a.pop, a);
 //
 //
-//  The soul of wit: reverse an array
-const reverse = a => a.sort();
 
 console.log(reverse([1, 2, 3]));
 // , [3, 2, 1]);
