@@ -11835,3 +11835,152 @@ X123456788   -->  false */
 //
 //
 //
+// function getLargestExpressionResult(a, b) {
+//     const c = a + b;
+//     const d = a - b;
+//     const f = a * b;
+//     const g = a / b;
+//     let t = c;
+//     if (t < d) t = d;
+//     if (t < f) t = f;
+//     if (t < g) t = g;
+//     return t;
+// }
+// console.log(getLargestExpressionResult(-5, -1));
+
+// function calculateProfit(amount, percent, period) {
+//     let t = amount;
+
+//     for (let i = 1; i <= period; i++) {
+//         t += t * (percent / 100);
+//     }
+//     return parseInt(t - amount);
+// }
+// console.log(calculateProfit(1000, 5, 1)); // 50
+// console.log(calculateProfit(12500, 3, 12)); // 5322
+
+// function getArraysSum(arr1, arr2) {
+//     // write code here
+//     let sum = 0;
+//     for (let i = 0; i < arr1.length; i++) {
+//         sum += arr1[i] + arr2[i];
+//     }
+//     return sum;
+// }
+
+// console.log(getArraysSum([1, 2], [3, 4])); // 10 (1 + 2 + 3 + 4)
+// // console.log(getArraysSum([1, 2, 3, 4], [5, 6, 7, 8])); // 36
+// // console.log(getArraysSum([], [])); // 0
+
+// function splitString(str) {
+//     const a = [];
+//     let nS = str;
+//     if (str.length % 2 !== 0) nS += '_';
+//     for (let i = 0; i < nS.length; i += 2) {
+//         a.push(nS[i] + nS[i + 1]);
+//     }
+//     return a;
+// }
+
+// console.log(splitString('123456')); // ['12', '34', '56']
+// console.log(splitString('ab cd ef')); // ['ab', ' c', 'd ', 'ef']
+// console.log(splitString('abc')); // ['ab', 'c_']
+// console.log(splitString(' ')); // [' _']
+// console.log(splitString('')); // []
+
+// function scrollingText(word) {
+//     // write code here
+//     const nA = [];
+//     let nW = word;
+//     for (let i = 0; i < word.length - 1; i++) {
+//         nW = nW.slice(1) + word[i];
+//         nA.push(nW.toUpperCase());
+//     }
+//     nA.unshift(word.toUpperCase());
+//     return nA;
+// }
+// console.log(scrollingText('robot'));
+// // [
+// //     'ROBOT', // спочатку вхідне слово
+// //     'OBOTR', // потім із переставленим порядком символів
+// //     'BOTRO',
+// //     'OTROB',
+// //     'TROBO',
+// // ];
+
+// function isSpecialNumber(n) {
+//     const nN = n.toString().split('');
+//     for (let i = 0; i < nN.length; i++) {
+//         if ((Number(nN[i]) > 0 && Number(nN[i]) <= 5) !== true) {
+//             return 'NOT!!';
+//         }
+//     }
+
+//     return 'Special!!';
+// }
+
+// console.log(isSpecialNumber(2)); // 'Special!!'
+// // 2 — знаходиться в інтервалі від 0 до 5
+
+// console.log(isSpecialNumber(9)); // 'NOT!!'
+// // 9 > 5
+
+// console.log(isSpecialNumber(23)); // 'Special!!'
+// // всі цифри числа 23 знаходяться в інтервалі від 0 до 5
+
+// console.log(isSpecialNumber(38)); // 'NOT!!'
+// // 8 > 5
+
+// function isTidy(number) {
+//     const nN = number.toString().split('');
+//     console.log(nN);
+//     for (let i = 1; i < nN.length; i++) {
+//         if (nN[i - 1] <= nN[i] !== true) return false;
+//     }
+//     return true;
+// }
+
+// console.log(isTidy(12)); // true
+// // цифри розташовані за зростанням
+
+// console.log(isTidy(32)); // false
+// // цифри розташовані за спаданням
+
+// console.log(isTidy(1024)); // false
+// // 1 > 0
+
+// console.log(isTidy(3445)); // true
+// // однакові цифри можуть бути поруч
+
+// console.log(isTidy(13579)); // true
+// // цифри розташовані за зростанням
+
+// function isJumping(number) {
+//     const nN = number.toString();
+//     if (nN.length === 1) return 'JUMPING';
+
+//     for (let i = 1; i <= nN.length - 1; i++) {
+//         // console.log(Number(nN[i - 1]), Number(nN[i]), Number(nN[i + 1]));
+//         // console.log(
+//         //     Number(nN[i - 1]) - Number(nN[i]) === -1 || Number(nN[i - 1]) - Number(nN[i]) === 1
+//         // );
+//         if (Number(nN[i - 1]) - Number(nN[i]) !== -1 && Number(nN[i - 1]) - Number(nN[i]) !== 1) {
+//             return 'NOT JUMPING';
+//         }
+//     }
+//     return 'JUMPING';
+// }
+
+// // число з однієї цифри
+// console.log(isJumping(9)); // 'JUMPING'
+
+// // 7 і 9 відрізняються на 2, а не на 1
+// console.log(isJumping(79)); // 'NOT JUMPING'
+
+// // різниця між однаковими цифрами дорівнює 0
+// console.log(isJumping(7889)); // 'NOT JUMPING'
+
+// // усі сусідні цифри відрізняються на 1
+// console.log(isJumping(23454)); // 'JUMPING'
+
+// console.log();
