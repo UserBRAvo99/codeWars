@@ -11984,3 +11984,36 @@ X123456788   -->  false */
 // console.log(isJumping(23454)); // 'JUMPING'
 
 // console.log();
+
+// function makeAbbr(words) {
+//     // write code here
+//     let t = '';
+//     const nW = words.split(' ');
+//     for (let w of nW) {
+//         t += w[0];
+//     }
+//     return t.toUpperCase();
+// }
+
+// // 'NASA'
+// console.log(makeAbbr('national aeronautics space administration'));
+
+function isWerewolf(target) {
+    // write code here
+    let nT = '';
+    for (let w of target) {
+        if (w.toLowerCase() !== w.toUpperCase()) {
+            nT += w;
+        }
+    }
+    return nT.toLowerCase() === nT.split('').reverse().join('').toLowerCase();
+}
+
+console.log(isWerewolf('rotator'));
+//  === true // rotator --> rotator
+console.log(isWerewolf('home'));
+//  === false // home --> emoh
+console.log(isWerewolf('Racecar'));
+//  === true // регістр ігнорується
+console.log(isWerewolf('eva, can i see bees in a cave'));
+//  === true // пробіли і розділові знаки ігноруються
