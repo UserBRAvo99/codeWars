@@ -11998,22 +11998,41 @@ X123456788   -->  false */
 // // 'NASA'
 // console.log(makeAbbr('national aeronautics space administration'));
 
-function isWerewolf(target) {
-    // write code here
-    let nT = '';
-    for (let w of target) {
-        if (w.toLowerCase() !== w.toUpperCase()) {
-            nT += w;
-        }
-    }
-    return nT.toLowerCase() === nT.split('').reverse().join('').toLowerCase();
-}
+// function isWerewolf(target) {
+//     // write code here
+//     let nT = '';
+//     for (let w of target) {
+//         if (w.toLowerCase() !== w.toUpperCase()) {
+//             nT += w;
+//         }
+//     }
+//     return nT.toLowerCase() === nT.split('').reverse().join('').toLowerCase();
+// }
 
-console.log(isWerewolf('rotator'));
-//  === true // rotator --> rotator
-console.log(isWerewolf('home'));
-//  === false // home --> emoh
-console.log(isWerewolf('Racecar'));
-//  === true // регістр ігнорується
-console.log(isWerewolf('eva, can i see bees in a cave'));
-//  === true // пробіли і розділові знаки ігноруються
+// console.log(isWerewolf('rotator'));
+// //  === true // rotator --> rotator
+// console.log(isWerewolf('home'));
+// //  === false // home --> emoh
+// console.log(isWerewolf('Racecar'));
+// //  === true // регістр ігнорується
+// console.log(isWerewolf('eva, can i see bees in a cave'));
+// //  === true // пробіли і розділові знаки ігноруються
+
+// function getSuccessRate(statistic) {
+//     let t = 0;
+//     if (statistic === '') return 0;
+//     for (let n of statistic) {
+//         if (Number(n) === 1) {
+//             t += 1;
+//         }
+//     }
+//     if (t === 0) return 0;
+//     return Math.round((100 / statistic.length) * t);
+//     // write code here
+// }
+
+// console.log(getSuccessRate('11100')); // 60
+// console.log(getSuccessRate('1100')); // 50
+// console.log(getSuccessRate('000000')); // 0
+// console.log(getSuccessRate('11111')); // 100
+// console.log(getSuccessRate('')); // 0
