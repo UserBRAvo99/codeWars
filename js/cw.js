@@ -12171,22 +12171,72 @@ X123456788   -->  false */
 // console.log(removeZeros(-2410)); // -241
 // console.log(removeZeros(0)); // 0
 
-function getOddNumbers(numbers) {
+// function getOddNumbers(numbers) {
+//     // write code here
+//     const arr = [];
+//     for (const n of numbers) {
+//         if (n > 0 && n % 2 === 1) {
+//             arr.push(n);
+//         }
+//         if (n < 0 && n % 2 === -1) {
+//             arr.push(n);
+//         }
+//     }
+//     return arr;
+// }
+
+// console.log(getOddNumbers([1, 2, 3, 4, 5, 6, 7, 7]));
+// //  === [1, 3, 5, 7, 7];
+// console.log(getOddNumbers([0, 2, 4]));
+// //  === [];
+// console.log(getOddNumbers([-10, 10, -11, -12, 12]));
+
+// function getLastDigit(number) {
+//     // write code here
+//     return Number(`${number}`.split('')[`${number}`.split('').length - 1]);
+// }
+
+// console.log(getLastDigit(1));
+// //  === 1;
+// console.log(getLastDigit(145));
+// //  === 5;
+// console.log(getLastDigit(5267723));
+// //  === 3;
+// console.log(getLastDigit(-1));
+// //  === 1;
+// console.log(getLastDigit(-1.2454));
+// //  === 4;
+
+// function getLastCharacter(input) {
+//     // write code here
+//     return input.split('')[input.split('').length - 1];
+// }
+
+// console.log(getLastCharacter('abc')); // 'c'
+// console.log(getLastCharacter('number 13')); // '3'
+// console.log(getLastCharacter('#$@!')); // '!'
+
+// function getLongestString(strings) {
+//     // write code here
+//     let s = strings[0];
+//     for (const w of strings) {
+//         if (s.length < w.length) s = w;
+//     }
+//     return s;
+// }
+
+// console.log(getLongestString(['One', 'two', 'three', 'four']));
+// //  === 'three';
+// console.log(getLongestString(['One', 'two', 'six']));
+// //  === 'One';
+
+function removeVowelKeys(keys) {
     // write code here
-    const arr = [];
-    for (const n of numbers) {
-        if (n > 0 && n % 2 === 1) {
-            arr.push(n);
-        }
-        if (n < 0 && n % 2 === -1) {
-            arr.push(n);
-        }
+    let arr = [];
+    const a = ['a', 'e', 'i', 'o', 'u', 'y'];
+    for (let w of keys) {
+        if (!a.includes(w[0].toLowerCase())) arr.push(w);
     }
     return arr;
 }
-
-console.log(getOddNumbers([1, 2, 3, 4, 5, 6, 7, 7]));
-//  === [1, 3, 5, 7, 7];
-console.log(getOddNumbers([0, 2, 4]));
-//  === [];
-console.log(getOddNumbers([-10, 10, -11, -12, 12]));
+console.log(removeVowelKeys(['alarm', 'chip', 'isValid', 'Advice', 'onClick'])); // ['chip']
