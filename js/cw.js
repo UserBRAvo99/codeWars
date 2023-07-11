@@ -12036,3 +12036,61 @@ X123456788   -->  false */
 // console.log(getSuccessRate('000000')); // 0
 // console.log(getSuccessRate('11111')); // 100
 // console.log(getSuccessRate('')); // 0
+
+// function createArray(N) {
+//     // write code here
+//     const arr = [];
+//     for (let i = 1; i <= N; i++) {
+//         arr.push(i);
+//     }
+//     return arr;
+// }
+
+// console.log(createArray(1)); // [1]
+// console.log(createArray(3)); // [1, 2, 3]
+// console.log(createArray(0)); // []
+
+// function makeStickers(detailsCount, robotPart) {
+//     // write code here
+//     const arr = [];
+//     for (let i = 1; i <= detailsCount; i++) {
+//         arr.push(`${robotPart} detail #${i}`);
+//     }
+//     return arr;
+// }
+// console.log(makeStickers(3, 'Body')); // ['Body detail #1', 'Body detail #2', 'Body detail #3']
+// console.log(makeStickers(4, 'Head')); // ['Head detail #1', 'Head detail #2', 'Head detail #3', 'Head detail #4']
+// console.log(makeStickers(0, 'Foot')); // []
+
+// function isSorted(boxNumbers) {
+//     // write code here
+//     for (let i = 0; i < boxNumbers.length; i++) {
+//         console.log(boxNumbers[i], boxNumbers[i + 1]);
+//         if (boxNumbers[i] > boxNumbers[i + 1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// // console.log(isSorted([1, 2, 3, 4, 5])); // true
+// // console.log(isSorted([0, 1, 1, 1, 2])); // true
+// // console.log(isSorted([1, 2, 11])); // true
+// // console.log(isSorted([5])); // true
+// // console.log(isSorted([])); // true
+// // console.log(isSorted([0, 3, 1, 2, 2, 2])); // false
+// console.log(isSorted([5, 3])); // false
+
+// function getPlan(startProduction, numberOfMonths, percent) {
+//     // write code here
+//     const arr = [];
+//     let t = startProduction;
+//     for (let i = 1; i <= numberOfMonths; i++) {
+//         t = parseInt(t + t * (percent / 100));
+//         arr.push(t);
+//     }
+//     return arr;
+// }
+
+// console.log(getPlan(10, 4, 30)); // [13, 16, 20, 26]
+// console.log(getPlan(1000, 6, 20)); // [1200, 1440, 1728, 2073, 2487, 2984]
