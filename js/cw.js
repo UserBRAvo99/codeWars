@@ -12131,3 +12131,26 @@ X123456788   -->  false */
 // console.log(getSpeedStatistic([10])); // [10, 10, 10]
 // console.log(getSpeedStatistic([8, 9, 3, 12])); // [3, 12, 8]
 // console.log(getSpeedStatistic([10, 10, 11, 9, 12, 8])); // [8, 12, 10]
+
+function compareRobots(firstRobotResults, secondRobotResults) {
+    // write code here
+    let tF = 0;
+    let tS = 0;
+    let a = '';
+
+    for (const n of firstRobotResults) {
+        tF += n;
+    }
+    for (const n of secondRobotResults) {
+        tS += n;
+    }
+    tF === tS
+        ? (a = 'Both robots for sale!')
+        : tF > tS
+        ? (a = 'First robot for sale!')
+        : (a = 'Second robot for sale!');
+    return a;
+}
+console.log(compareRobots([12, 4, 13], [1, 1, 4, 5, 12])); // 'First robot for sale!' (29 > 23)
+console.log(compareRobots([9, 7, 9], [1, 3, 4, 5, 12])); // 'Both robots for sale!' (25 = 25)
+console.log(compareRobots([1, 3, 4], [1, 1, 4, 5])); // 'Second robot for sale!' (8 < 11)
