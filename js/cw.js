@@ -12109,3 +12109,25 @@ X123456788   -->  false */
 // console.log(getLocation([0, 0], ['forward', 'right'])); // [1, 1]
 // console.log(getLocation([2, 3], ['back', 'back', 'back', 'right'])); // [3, 0]
 // console.log(getLocation([0, 5], ['back', 'back', 'back', 'right', 'left', 'forward'])); // [0, 3]
+
+// function getSpeedStatistic(testResults) {
+//     // write code here
+//     if (testResults.length === 0) return [0, 0, 0];
+//     let t = 0;
+//     let mi = testResults[0];
+//     let ma = testResults[0];
+
+//     for (const n of testResults) {
+//         if (n <= mi) mi = n;
+//         if (n >= ma) ma = n;
+//         t += n;
+//     }
+//     // Math.max.apply(null, testResults);
+//     // Math.min.apply(null, testResults);
+//     return [mi, ma, Math.floor(t / testResults.length)];
+// }
+
+// console.log(getSpeedStatistic([])); // [0, 0, 0]
+// console.log(getSpeedStatistic([10])); // [10, 10, 10]
+// console.log(getSpeedStatistic([8, 9, 3, 12])); // [3, 12, 8]
+// console.log(getSpeedStatistic([10, 10, 11, 9, 12, 8])); // [8, 12, 10]
