@@ -12081,16 +12081,31 @@ X123456788   -->  false */
 // // console.log(isSorted([0, 3, 1, 2, 2, 2])); // false
 // console.log(isSorted([5, 3])); // false
 
-// function getPlan(startProduction, numberOfMonths, percent) {
-//     // write code here
-//     const arr = [];
-//     let t = startProduction;
-//     for (let i = 1; i <= numberOfMonths; i++) {
-//         t = parseInt(t + t * (percent / 100));
-//         arr.push(t);
+//
+
+// function getLocation(coordinates, commands) {
+//     let x = coordinates[0];
+//     let y = coordinates[1];
+
+//     for (let c of commands) {
+//         switch (c) {
+//             case 'forward':
+//                 y += 1;
+//                 break;
+//             case 'back':
+//                 y -= 1;
+//                 break;
+//             case 'right':
+//                 x += 1;
+//                 break;
+//             case 'left':
+//                 x -= 1;
+//                 break;
+//         }
 //     }
-//     return arr;
+//     return [x, y];
 // }
 
-// console.log(getPlan(10, 4, 30)); // [13, 16, 20, 26]
-// console.log(getPlan(1000, 6, 20)); // [1200, 1440, 1728, 2073, 2487, 2984]
+// console.log(getLocation([0, 0], ['forward', 'right'])); // [1, 1]
+// console.log(getLocation([2, 3], ['back', 'back', 'back', 'right'])); // [3, 0]
+// console.log(getLocation([0, 5], ['back', 'back', 'back', 'right', 'left', 'forward'])); // [0, 3]
