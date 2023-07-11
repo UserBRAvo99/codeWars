@@ -12155,18 +12155,38 @@ X123456788   -->  false */
 // console.log(compareRobots([9, 7, 9], [1, 3, 4, 5, 12])); // 'Both robots for sale!' (25 = 25)
 // console.log(compareRobots([1, 3, 4], [1, 1, 4, 5])); // 'Second robot for sale!' (8 < 11)
 
-function removeZeros(number) {
+// function removeZeros(number) {
+//     // write code here
+//     const nn = `${number}`.split('');
+//     let s = '';
+//     for (const n of nn) {
+//         if (Number(n) > 0) s += n;
+//         if (n === '-') s += n;
+//     }
+//     // console.log(Number(nn.join('')));
+//     return Number(s);
+// }
+// console.log(removeZeros(100)); // 1
+// console.log(removeZeros(101002)); // 112
+// console.log(removeZeros(-2410)); // -241
+// console.log(removeZeros(0)); // 0
+
+function getOddNumbers(numbers) {
     // write code here
-    const nn = `${number}`.split('');
-    let s = '';
-    for (const n of nn) {
-        if (Number(n) > 0) s += n;
-        if (n === '-') s += n;
+    const arr = [];
+    for (const n of numbers) {
+        if (n > 0 && n % 2 === 1) {
+            arr.push(n);
+        }
+        if (n < 0 && n % 2 === -1) {
+            arr.push(n);
+        }
     }
-    // console.log(Number(nn.join('')));
-    return Number(s);
+    return arr;
 }
-console.log(removeZeros(100)); // 1
-console.log(removeZeros(101002)); // 112
-console.log(removeZeros(-2410)); // -241
-console.log(removeZeros(0)); // 0
+
+console.log(getOddNumbers([1, 2, 3, 4, 5, 6, 7, 7]));
+//  === [1, 3, 5, 7, 7];
+console.log(getOddNumbers([0, 2, 4]));
+//  === [];
+console.log(getOddNumbers([-10, 10, -11, -12, 12]));
