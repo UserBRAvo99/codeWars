@@ -12230,13 +12230,21 @@ X123456788   -->  false */
 // console.log(getLongestString(['One', 'two', 'six']));
 // //  === 'One';
 
-function removeVowelKeys(keys) {
-    // write code here
-    let arr = [];
-    const a = ['a', 'e', 'i', 'o', 'u', 'y'];
-    for (let w of keys) {
-        if (!a.includes(w[0].toLowerCase())) arr.push(w);
-    }
-    return arr;
-}
-console.log(removeVowelKeys(['alarm', 'chip', 'isValid', 'Advice', 'onClick'])); // ['chip']
+// function removeVowelKeys(keys) {
+//     // write code here
+//     let arr = [];
+//     const a = ['a', 'e', 'i', 'o', 'u', 'y'];
+//     for (let w of keys) {
+//         if (!a.includes(w[0].toLowerCase())) arr.push(w);
+//     }
+//     return arr;
+// }
+// console.log(removeVowelKeys(['alarm', 'chip', 'isValid', 'Advice', 'onClick'])); // ['chip']
+
+String.prototype.toJadenCase = function () {
+    console.log(this);
+    //...
+};
+
+let sentence = "How can mirrors be real if our eyes aren't real";
+console.log(sentence.toJadenCase());
