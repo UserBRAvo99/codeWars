@@ -12241,10 +12241,24 @@ X123456788   -->  false */
 // }
 // console.log(removeVowelKeys(['alarm', 'chip', 'isValid', 'Advice', 'onClick'])); // ['chip']
 
-String.prototype.toJadenCase = function () {
-    console.log(this);
-    //...
-};
+// String.prototype.toJadenCase = function () {
+//     let nW = '';
+//     console.log(this.split(' '));
+//     for (let e of this.split(' ')) {
+//         console.log(e);
+//         for (let i = 0; i < e.length; i++) {
+//             console.log(i[i]);
+//             if (i === 0) {
+//                 nW += e[i].toUpperCase();
+//             }
+//             if (i !== 0) {
+//                 nW += e[i].toLowerCase();
+//             }
+//         }
+//         nW += ' ';
+//     }
+//     return nW.trim();
+// };
 
-let sentence = "How can mirrors be real if our eyes aren't real";
-console.log(sentence.toJadenCase());
+// let sentence = "How can mirrors be real if our eyes aren't real";
+// console.log(sentence.toJadenCase());
