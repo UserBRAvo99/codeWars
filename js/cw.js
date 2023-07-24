@@ -12262,3 +12262,55 @@ X123456788   -->  false */
 
 // let sentence = "How can mirrors be real if our eyes aren't real";
 // console.log(sentence.toJadenCase());
+
+const s = '8cRe NF7cI2sIMsh25Y';
+
+const p1 = '8R Fc2Is2Y';
+
+const p2 = 'ceN7IsMh5';
+
+// Початковий код:
+
+// const stringChecker = function (s, p1, p2) {
+//     if (p1.length + p2.length !== s.length) return false;
+//     if (p1 + p2 === s) return true;
+
+//     let a = '';
+//     let b = '';
+//     for (let i = 0; i < s.length; i++) {
+//         if (p1.includes(s[i]) && a.length < p1.length) a += s[i];
+//         if (p2.includes(s[i]) && b.length < p2.length) b += s[i];
+//     }
+//     console.log(a);
+//     console.log(b);
+//     if (a === p1 && b === p2) return true;
+//     return false;
+// };
+
+// console.log(stringChecker(s, p1, p2));
+
+const stringChecker = function (s, p1, p2) {
+    if (p1.length + p2.length !== s.length) return false;
+    if (p1 + p2 === s) return true;
+    const word = s.split('');
+    let first = null;
+    let second = null;
+    if (s[0] === p1[0]) {
+        first = p1;
+        second = p2;
+    }
+    if (s[0] === p2[0]) {
+        first = p2;
+        second = p1;
+    }
+    for (let i = 0; i < word.length; i++) {
+        console.log(word[i]);
+        if (first.includes(word[i])) {
+            word.splice(i, 1);
+        }
+    }
+    if (word.join('') === second) return true;
+    return false;
+};
+
+console.log(stringChecker(s, p1, p2));
