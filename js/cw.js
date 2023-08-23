@@ -12289,28 +12289,44 @@ const p2 = 'ceN7IsMh5';
 
 // console.log(stringChecker(s, p1, p2));
 
-const stringChecker = function (s, p1, p2) {
-    if (p1.length + p2.length !== s.length) return false;
-    if (p1 + p2 === s) return true;
-    const word = s.split('');
-    let first = null;
-    let second = null;
-    if (s[0] === p1[0]) {
-        first = p1;
-        second = p2;
-    }
-    if (s[0] === p2[0]) {
-        first = p2;
-        second = p1;
-    }
-    for (let i = 0; i < word.length; i++) {
-        console.log(word[i]);
-        if (first.includes(word[i])) {
-            word.splice(i, 1);
-        }
-    }
-    if (word.join('') === second) return true;
-    return false;
-};
+// const stringChecker = function (s, p1, p2) {
+//     if (p1.length + p2.length !== s.length) return false;
+//     if (p1 + p2 === s) return true;
+//     const word = s.split('');
+//     let first = null;
+//     let second = null;
+//     if (s[0] === p1[0]) {
+//         first = p1;
+//         second = p2;
+//     }
+//     if (s[0] === p2[0]) {
+//         first = p2;
+//         second = p1;
+//     }
+//     for (let i = 0; i < word.length; i++) {
+//         console.log(word[i]);
+//         if (first.includes(word[i])) {
+//             word.splice(i, 1);
+//         }
+//     }
+//     if (word.join('') === second) return true;
+//     return false;
+// };
 
-console.log(stringChecker(s, p1, p2));
+// console.log(stringChecker(s, p1, p2));
+
+// function areYouPlayingBanjo(name) {
+//     // Implement me
+//     return name[0].toLowerCase();
+// }
+
+// console.log(areYouPlayingBanjo('Adam'));
+// // , 'Adam does not play banjo');
+// console.log(areYouPlayingBanjo('Paul'));
+// // , 'Paul does not play banjo');
+// console.log(areYouPlayingBanjo('Ringo'));
+// // , 'Ringo plays banjo');
+// console.log(areYouPlayingBanjo('bravo'));
+// // , 'bravo does not play banjo');
+// console.log(areYouPlayingBanjo('rolf'));
+// // , 'rolf plays banjo');
