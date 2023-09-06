@@ -12330,3 +12330,13 @@ const p2 = 'ceN7IsMh5';
 // // , 'bravo does not play banjo');
 // console.log(areYouPlayingBanjo('rolf'));
 // // , 'rolf plays banjo');
+
+// function firstConstrctor(age, name, lastName) {
+//     this.name = name;
+//     this.lastName = lastName;
+//     this.age = age;
+// }
+
+// const user1 = new firstConstrctor(19, 'Roman', 'Bondarchuk');
+
+// console.log(Object.entries(user1));
